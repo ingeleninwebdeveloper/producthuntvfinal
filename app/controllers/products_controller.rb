@@ -25,6 +25,10 @@ def show
 
 end
 
+def edit
+  @product = Product.find(params[:id])
+
+end
 
 
 private
