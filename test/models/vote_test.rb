@@ -1,16 +1,18 @@
 # == Schema Information
 #
-# Table name: comments
+# Table name: votes
 #
 #  id         :integer          not null, primary key
-#  body       :text
-#  user_id    :integer
 #  product_id :integer
+#  user_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Comment < ApplicationRecord
-  belongs_to :user
-  belongs_to :product
+require 'test_helper'
+
+class VoteTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
 end
