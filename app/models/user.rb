@@ -13,6 +13,9 @@
 
 class User < ApplicationRecord
 	has_secure_password validations: false
+	has_many :products #un usuario tiene muchos productos
+	has_many :comments #un usuario tioeene muchos comentarios
+
 	validates :email, uniqueness: true, format: /@/
 validates :password, presence: true, on: :create
 validates :password, length: { in: 6..20 }, allow_nil: true
